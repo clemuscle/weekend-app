@@ -2,6 +2,7 @@
 
 FROM golang:1.22-alpine AS build
 WORKDIR /src
+LABEL org.opencontainers.image.source="https://github.com/clemuscle/weekend-app"
 
 # (facultatif si ton binaire fait du TLS, utile pour ca-certs)
 RUN apk add --no-cache ca-certificates
