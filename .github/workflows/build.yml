@@ -15,7 +15,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
+          role-to-assume: arn:aws:iam::${{ aws.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
           aws-region: eu-west-3
 
       - uses: aws-actions/amazon-ecr-login@v2
